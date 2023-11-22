@@ -152,8 +152,8 @@ html {
   }
   
   .logo {
-    height: 2.6em !important;
-    width: 3.0em !important;
+    height: 1.8em !important;
+    width: 1.8em !important;
   }
   
   .navbar-nav .nav-link {
@@ -290,7 +290,8 @@ html {
     .Typewriter__wrapper {
       font-size: 1.4em !important;
       font-weight: 500 !important;
-      position: absolute !important;
+      display: flex !important;
+      justify-content: center !important;
     }
     .Typewriter__cursor {
       display: none !important;
@@ -341,7 +342,7 @@ html {
     position: relative !important;
     padding-inline-start: 0 !important;
   }
-  
+
   .home-social-icons {
     position: relative !important;
     display: inline-block !important;
@@ -516,9 +517,9 @@ html {
     border: 1.7px solid rgba(104, 89, 238, 0.637) !important;
     vertical-align: middle !important;
     text-align: center !important;
-    border-radius: 5px !important;
+    border-radius: 800px !important;
     display: table !important;
-    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+    box-shadow: 4px 5px 4px 3px rgba(15, 4, 168, 0.137) !important;
     overflow: hidden !important;
     transition: all 0.4s ease 0s !important;
   }
