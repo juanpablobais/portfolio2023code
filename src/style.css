@@ -402,6 +402,8 @@ html {
   }
   .footer-copywright {
     text-align: center !important;
+    color: white;
+    font-size: small;
   }
   
   .footer-body {

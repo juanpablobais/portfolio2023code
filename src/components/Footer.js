@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { TbBrandFiverr } from "react-icons/tb";
 
 function Footer() {
   let date = new Date();
@@ -45,10 +45,20 @@ function Footer() {
                 <AiFillInstagram />
               </a>
             </li>
+            <li className="social-icons">
+              <a
+                href="https://es.fiverr.com/s/a4KY47"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <TbBrandFiverr />
+              </a>
+            </li>
           </ul>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Juan Pablo Bais</h3>
+          <h3>juanpablobais@gmail.com</h3>
         </Col>
       </Row>
     </Container>

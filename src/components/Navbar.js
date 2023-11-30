@@ -4,14 +4,19 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
-import { ImLink } from "react-icons/im";
+import { LuBarChartBig } from "react-icons/lu";
+
 import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
 import LanguageSelector from "../components/LanguageSelector"
 import { useTranslation } from "react-i18next";
+import { BiCameraMovie } from "react-icons/bi";
+import { FaDollarSign } from "react-icons/fa6";
+import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { GrHomeRounded } from "react-icons/gr";
+
+
 
 function NavBar() {
   const { t } = useTranslation();
@@ -53,7 +58,7 @@ function NavBar() {
           <Nav className="ms-auto navbar-nav" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("Inicio")}
+                <GrHomeRounded style={{ marginBottom: "2px" }} /> {t("Inicio")}
               </Nav.Link>
             </Nav.Item>
 
@@ -63,7 +68,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Skills
+                <LuBarChartBig style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -73,7 +78,7 @@ function NavBar() {
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
+                <HiOutlineDesktopComputer
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 {t("Proyectos")}
@@ -82,11 +87,29 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://vision-critica.vercel.app/"
+                as={Link}
+                to="https://es.fiverr.com/juanpablobais?public_mode=true"
                 target="_blank"
-                rel="noreferrer"
+                onClick={() => updateExpanded(false)}
               >
-                <ImLink style={{ marginBottom: "2px" }} /> VisionCritica
+                <FaDollarSign
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Fiverr
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="https://vision-critica.vercel.app/"
+                target="_blank"
+                onClick={() => updateExpanded(false)}
+              >
+                <BiCameraMovie 
+                  style={{ marginBottom: "2px" }}
+                  />{" "}
+                VisionCritica
               </Nav.Link>
             </Nav.Item>
           </Nav>

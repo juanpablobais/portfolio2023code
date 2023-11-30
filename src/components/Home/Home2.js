@@ -8,6 +8,10 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import { TbBrandFiverr } from "react-icons/tb";
+
 
 function Home2() {
   const { t } = useTranslation();
@@ -40,6 +44,10 @@ function Home2() {
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
+                  <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip id="github-tooltip">{t("GitHub")}</Tooltip>}
+                  >   
                 <a
                   href="https://github.com/juanpablobais?tab=repositories"
                   target="_blank"
@@ -48,8 +56,13 @@ function Home2() {
                 >
                   <AiFillGithub />
                 </a>
+                </OverlayTrigger>
               </li>
               <li className="social-icons">
+              <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip id="linkedin-tooltip">{t("LinkedIn")}</Tooltip>}
+                  >   
                 <a
                   href="https://www.linkedin.com/in/baisjuanpablo/"
                   target="_blank"
@@ -58,8 +71,13 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
+                </OverlayTrigger>
               </li>
               <li className="social-icons">
+              <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip id="instagram-tooltip">{t("Instagram")}</Tooltip>}
+                  >   
                 <a
                   href="https://www.instagram.com/j.uanpablo/"
                   target="_blank"
@@ -68,6 +86,22 @@ function Home2() {
                 >
                   <AiFillInstagram />
                 </a>
+                </OverlayTrigger>
+              </li>
+              <li className="social-icons">
+              <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip id="fiverr-tooltip">{t("Fiverr")}</Tooltip>}
+                  >   
+                <a
+                  href="https://es.fiverr.com/s/XvKN2Z"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <TbBrandFiverr />
+                </a>
+                </OverlayTrigger>
               </li>
             </ul>
           </Col>
